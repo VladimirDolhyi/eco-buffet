@@ -50,7 +50,6 @@ class Ingredient(models.Model):
     name = models.CharField(max_length=255)
     dishes = models.ManyToManyField(
         Dish,
-        on_delete=models.CASCADE,
         related_name="ingredients"
     )
 
