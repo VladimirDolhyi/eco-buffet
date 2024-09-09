@@ -1,7 +1,8 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
+from django.views import generic
 
-from cafe.models import Cook, Dish, DishType
+from cafe.models import Cook, Dish, DishType, Ingredient
 
 
 def index(request: HttpRequest) -> HttpResponse:
@@ -22,3 +23,34 @@ def index(request: HttpRequest) -> HttpResponse:
     }
 
     return render(request, "cafe/index.html", context=context)
+
+
+class DishTypeListView(generic.ListView):
+    model = DishType
+    context_object_name = "dish_type_list"
+    template_name = "cafe/dish_type_list.html"
+    paginate_by = 5
+
+
+class DishListView(generic.ListView):
+    model = Dish
+    paginate_by = 5
+
+    def get_queryset(self):
+        queryset = Dish.objects.select_related("dish_type")
+        return queryset
+
+
+class IngredientListView(generic.ListView):
+    model = Ingredient
+    paginate_by = 5
+    queryset = Ingredient.objects.prefetch_related("dishes")
+
+
+class CookListView(generic.ListView):
+    model = Cook
+    paginate_by = 5
+
+    def get_queryset(self):
+        queryset = Cook.objects.all()
+        return queryset
