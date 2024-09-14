@@ -17,15 +17,13 @@
       <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Description</th>
         <th>Price</th>
         <th style="white-space: nowrap;">Dish type</th>
       </tr>
       {% for dish in dish_list %}
         <tr>
-          <td><a href="#">{{ dish.id }}</a></td>
+          <td><a href="{% url "cafe:dish-detail" pk=dish.id %}">{{ dish.id }}</a></td>
           <td>{{ dish.name }}</td>
-          <td>{{ dish.description }}</td>
           <td>{{ dish.price }}</td>
           <td>{{ dish.dish_type }}</td>
         </tr>
