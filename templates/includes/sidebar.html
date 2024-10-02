@@ -2,9 +2,9 @@
   {% if user.is_authenticated %}
     <li class="list-group-item">User: <a href="{{ user.get_absolute_url }}">{{ user.get_username }}</a></li>
     <li class="list-group-item">
-      <form action="{% url 'logout' %}?next={{ request.path }}" method="post" style="display:inline;">
+      <form action="{% url 'logout' %}" method="post" style="display:inline;">
         {% csrf_token %}
-        <button type="submit" class="btn btn-link">Logout</button>
+        <button type="submit" class="btn btn-link" style="font-size: inherit; padding: 0; text-decoration: none;">Logout</button>
       </form>
     </li>
   {% else %}

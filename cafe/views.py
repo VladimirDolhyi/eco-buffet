@@ -36,6 +36,48 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
     paginate_by = 5
 
 
+class DishTypeCreateView(LoginRequiredMixin, generic.CreateView):
+    model = DishType
+    fields = "__all__"
+    success_url = reverse_lazy("cafe:dish-type-list")
+    template_name = "cafe/dish_type_form.html"
+
+
+class DishTypeUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = DishType
+    fields = "__all__"
+    success_url = reverse_lazy("cafe:dish-type-list")
+    template_name = "cafe/dish_type_form.html"
+
+
+class DishTypeDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = DishType
+    success_url = reverse_lazy("cafe:dish-type-list")
+    template_name = "cafe/dish_type_confirm_delete.html"
+
+
+class IngredientListView(LoginRequiredMixin, generic.ListView):
+    model = Ingredient
+    paginate_by = 5
+
+
+class IngredientCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Ingredient
+    fields = "__all__"
+    success_url = reverse_lazy("cafe:ingredient-list")
+
+
+class IngredientUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Ingredient
+    fields = "__all__"
+    success_url = reverse_lazy("cafe:ingredient-list")
+
+
+class IngredientDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Ingredient
+    success_url = reverse_lazy("cafe:ingredient-list")
+
+
 class DishListView(LoginRequiredMixin, generic.ListView):
     model = Dish
     paginate_by = 5
@@ -49,9 +91,21 @@ class DishDetailView(LoginRequiredMixin, generic.DetailView):
     model = Dish
 
 
-class IngredientListView(LoginRequiredMixin, generic.ListView):
-    model = Ingredient
-    paginate_by = 5
+class DishCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Dish
+    fields = "__all__"
+    success_url = reverse_lazy("cafe:dish-list")
+
+
+class DishUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Dish
+    fields = "__all__"
+    success_url = reverse_lazy("cafe:dish-list")
+
+
+class DishDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Dish
+    success_url = reverse_lazy("cafe:dish-list")
 
 
 class CookListView(LoginRequiredMixin, generic.ListView):
@@ -64,6 +118,18 @@ class CookListView(LoginRequiredMixin, generic.ListView):
 
 
 class CookDetailView(LoginRequiredMixin, generic.DetailView):
+    model = Cook
+
+
+class CookCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Cook
+
+
+class CookYearUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Cook
+
+
+class CookDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Cook
 
 

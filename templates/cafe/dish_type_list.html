@@ -4,7 +4,7 @@
 {% block content %}
   <h1>
     Dish type List
-    <a href="#" class="btn btn-primary link-to-page">
+    <a href="{% url 'cafe:dish-type-create' %}" class="btn btn-primary link-to-page">
       Create
     </a>
   </h1>
@@ -31,13 +31,13 @@
             {{ dish_type.name }}
           </td>
           <td>
-            <a href="#">
+            <a href="{% url 'cafe:dish-type-update' pk=dish_type.id %}">
               Update
             </a>
           </td>
           <td>
             <a style="color: red"
-               href="#">
+               href="{% url 'cafe:dish-type-delete' pk=dish_type.id %}">
               Delete
             </a>
           </td>
