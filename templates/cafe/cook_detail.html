@@ -3,13 +3,13 @@
 {% block content %}
   <h1>
     Username: {{ cook.username }}
-{#    <a href="{% url 'cafe:cook-delete' pk=cook.id %}" class="btn btn-danger link-to-page">#}
-{#      Delete#}
-{#    </a>#}
-{##}
-{#    <a href="{% url 'cafe:cook-update' pk=cook.id %}" class="btn btn-secondary link-to-page">#}
-{#      Update years of experience#}
-{#    </a>#}
+    <a href="{% url 'cafe:cook-delete' pk=cook.id %}" class="btn btn-danger link-to-page">
+      Delete
+    </a>
+
+    <a href="{% url 'cafe:cook-update' pk=cook.id %}" class="btn btn-secondary link-to-page">
+      Update years of experience
+    </a>
   </h1>
 
   <p><strong>First name:</strong> {{ cook.first_name }}</p>
