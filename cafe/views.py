@@ -206,7 +206,8 @@ class CookYearUpdateView(LoginRequiredMixin, generic.UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        if "from" in self.request.GET and self.request.GET["from"] == "cook-detail":
+        if ("from" in self.request.GET
+                and self.request.GET["from"] == "cook-detail"):
             context["is_update"] = True
         else:
             context["is_update"] = False
