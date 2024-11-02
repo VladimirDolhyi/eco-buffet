@@ -1,9 +1,9 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views import generic
+from django.views import generic, View
+from django.views.generic import TemplateView
 
 from cafe.forms import (
     CookYearUpdateForm,
@@ -17,27 +17,22 @@ from cafe.forms import (
 from cafe.models import Cook, Dish, DishType, Ingredient
 
 
-@login_required
-def index(request: HttpRequest) -> HttpResponse:
-    """View function for the home page of the site."""
+class IndexView(LoginRequiredMixin, TemplateView):
+    template_name = "cafe/index.html"
 
-    num_cooks = Cook.objects.count()
-    num_dishes = Dish.objects.count()
-    num_dish_types = DishType.objects.count()
-    num_ingredients = Ingredient.objects.count()
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
 
-    num_visits = request.session.get("num_visits", 0)
-    request.session["num_visits"] = num_visits + 1
+        context["num_cooks"] = Cook.objects.count()
+        context["num_dishes"] = Dish.objects.count()
+        context["num_dish_types"] = DishType.objects.count()
+        context["num_ingredients"] = Ingredient.objects.count()
 
-    context = {
-        "num_cooks": num_cooks,
-        "num_dishes": num_dishes,
-        "num_dish_types": num_dish_types,
-        "num_ingredients": num_ingredients,
-        "num_visits": num_visits + 1,
-    }
+        num_visits = self.request.session.get("num_visits", 0)
+        self.request.session["num_visits"] = num_visits + 1
+        context["num_visits"] = num_visits + 1
 
-    return render(request, "cafe/index.html", context=context)
+        return context
 
 
 class DishTypeListView(LoginRequiredMixin, generic.ListView):
@@ -221,13 +216,15 @@ class CookDeleteView(LoginRequiredMixin, generic.DeleteView):
     success_url = reverse_lazy("")
 
 
-@login_required
-def toggle_assign_to_dish(request, pk):
-    cook = Cook.objects.get(id=request.user.id)
-    if (
-            Dish.objects.get(id=pk) in cook.dishes.all()
-    ):  # probably could check if dish exists
-        cook.dishes.remove(pk)
-    else:
-        cook.dishes.add(pk)
-    return HttpResponseRedirect(reverse_lazy("cafe:dish-detail", args=[pk]))
+class ToggleAssignToDishView(LoginRequiredMixin, View):
+    @staticmethod
+    def post(request, pk):
+        cook = Cook.objects.get(id=request.user.id)
+        dish = Dish.objects.get(id=pk)
+
+        if dish in cook.dishes.all():
+            cook.dishes.remove(dish)
+        else:
+            cook.dishes.add(dish)
+
+        return HttpResponseRedirect(reverse_lazy("cafe:dish-detail", args=[pk]))
