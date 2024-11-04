@@ -91,7 +91,7 @@ $ python manage.py runserver
 <br />
 
 ### 👉 Home page
-![Home Page](static/images/Screenshot 1.png)
+![Home Page](static/images/Screenshot1.png)
 
 ### 👉 Database Schema
-![Database Schema](static/images/Screenshot 2.png)
+![Database Schema](static/images/Screenshot2.png)
