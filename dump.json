@@ -1,0 +1,767 @@
+[
+{
+    "model": "cafe.dishtype",
+    "pk": 1,
+    "fields": {
+        "name": "Soups"
+    }
+},
+{
+    "model": "cafe.dishtype",
+    "pk": 2,
+    "fields": {
+        "name": "Salads"
+    }
+},
+{
+    "model": "cafe.dishtype",
+    "pk": 3,
+    "fields": {
+        "name": "Second Courses"
+    }
+},
+{
+    "model": "cafe.dishtype",
+    "pk": 4,
+    "fields": {
+        "name": "Side dishes"
+    }
+},
+{
+    "model": "cafe.dishtype",
+    "pk": 5,
+    "fields": {
+        "name": "Drinks"
+    }
+},
+{
+    "model": "cafe.dishtype",
+    "pk": 6,
+    "fields": {
+        "name": "Desserts"
+    }
+},
+{
+    "model": "cafe.cook",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$IcdSOzZ7KFrsHPXHK9qV74$VSWMnsqrNog5FkOdLUbxCqQS0zH7k29LPceaaUGH7QQ=",
+        "last_login": "2024-11-09T20:04:05.939Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "Vladimir",
+        "last_name": "Dolhyi",
+        "email": "admin@admin.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-09-07T17:35:07Z",
+        "years_of_experience": 1,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "cafe.cook",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$LkXWZ1pC6DFFoADQE08m0C$G0T3ivLJPxjMzjJzH6ceqpwf9ieImtszmdgT747DfEU=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "casey.ryback",
+        "first_name": "Casey",
+        "last_name": "Ryback",
+        "email": "casey@ryback.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-09-07T19:35:42Z",
+        "years_of_experience": 5,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "cafe.cook",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$1RrwwrKnrFVKx3HWAFMnZf$W9NnHQ4BQ0RVEWWbfJw8A9rgso8nahYgmDtTw9eISP4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mike.krasnov",
+        "first_name": "Mike",
+        "last_name": "Krasnov",
+        "email": "mike@krasnov.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-10-19T16:47:49Z",
+        "years_of_experience": 4,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "cafe.cook",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$2pLDAcMllsDnpVlutjDWm7$UoosQGuBk1p6/BrJ6vriESKE+N+9eK6Mj8mIlWT+wV4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "igor.topor",
+        "first_name": "Igor",
+        "last_name": "Topor",
+        "email": "igor@topor.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-10-19T16:50:54Z",
+        "years_of_experience": 2,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "cafe.cook",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$zl4bPGEmDbJsAYA5Nwwhvh$lil7tLJn3GrR9r537klx4P5uId75SFxaSnQjsspp10Y=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "valentin.katalnikov",
+        "first_name": "Valentin",
+        "last_name": "Katalnikov",
+        "email": "valentin@katalnikov.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-10-19T16:52:50Z",
+        "years_of_experience": 3,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "cafe.cook",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$lYZ69HPNj2b7w3g4StIn5t$wMHpIKCtxVLgfy1t5sp1PnhRoJft5NRqR3Q5+XHDmo8=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "sergey.gorobinskiy",
+        "first_name": "Sergey",
+        "last_name": "Gorobinskiy",
+        "email": "sergey@gorobinskiy.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-10-19T16:57:40Z",
+        "years_of_experience": 4,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "cafe.cook",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$7V51KxPZX5vLj9DSCilmka$PTYqhEtl785Y7JcaadCDcahcLrPiH9QD0u9cd0brtLk=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "volodymyr.gryn",
+        "first_name": "Volodymyr",
+        "last_name": "Gryn",
+        "email": "volodymyr@gryn.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-10-19T17:12:55Z",
+        "years_of_experience": 2,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "cafe.cook",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$NhPUQVKukVCz8xhSqLuBvX$FwA05bF+YWDQF6dUAGzwtfVIzODaM8KNT9SjCrKnisc=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "sveta.syvun",
+        "first_name": "Sveta",
+        "last_name": "Syvun",
+        "email": "sveta@syvun.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-10-19T17:19:18Z",
+        "years_of_experience": 6,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "cafe.cook",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$q18OQYpRVz6neX7UM920ZO$MXw84hh3KSD6ihEXC83GLdh4dAKW2CHGOOarQEoEReI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ira.tarnavskaya",
+        "first_name": "Ira",
+        "last_name": "Tarnavskaya",
+        "email": "ira@tarnavskaya.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-10-19T17:21:10Z",
+        "years_of_experience": 4,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "cafe.cook",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$VOglvRGJ2dScNAuKRZIDxJ$1J+IAtyaSXDWda19NpTwtbsgjzwPgHH54osDRs5woWU=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "olena.klyus",
+        "first_name": "Olena",
+        "last_name": "Klyus",
+        "email": "olena@klyus.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-10-19T17:23:21Z",
+        "years_of_experience": 5,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "cafe.dish",
+    "pk": 1,
+    "fields": {
+        "name": "Green borsch",
+        "description": "One of the most delicious first courses of classic Ukrainian cuisine is sorrel-based borsch, which has a piquant sour taste. This is a great option for a nutritious and light meal in the summer. In addition, it contains a large number of vitamins and minerals. We add tofu cheese and aromatic spices to our sorrel borsch.",
+        "price": "60.00",
+        "dish_type": 1,
+        "cooks": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "cafe.dish",
+    "pk": 2,
+    "fields": {
+        "name": "Red borsch",
+        "description": "Red borsch in a vegan version will give you a traditional and unique taste of the Ukrainian national dish without adding meat. We use natural ingredients of the highest quality, such as fresh vegetables, spices and vegan broth to create a delicious, aromatic and hearty borsch. It is also rich in nutrients. It contains beans as a source of vegetable protein.",
+        "price": "65.00",
+        "dish_type": 1,
+        "cooks": [
+            10,
+            8
+        ]
+    }
+},
+{
+    "model": "cafe.dish",
+    "pk": 3,
+    "fields": {
+        "name": "Shuba salad",
+        "description": "Many people in Ukraine love the Shuba salad. But few know that there is a vegan recipe that includes potatoes, carrots, beets and lean mayonnaise. And instead of herring, seaweed is used, which gives the dish that very sea aroma and taste. Unlike the classic dish, the vegan Shuba salad is healthier, contains a minimum of fat and a lot of vitamins. It will be a wonderful addition to a side dish or a main course.",
+        "price": "70.00",
+        "dish_type": 2,
+        "cooks": [
+            9,
+            3
+        ]
+    }
+},
+{
+    "model": "cafe.dish",
+    "pk": 4,
+    "fields": {
+        "name": "Olivier salad",
+        "description": "Going vegetarian, fasting or dieting is not a reason to give up your favorite dishes! At EcoBuffet you can enjoy real Olivier. A popular and familiar salad according to a traditional recipe, but with low-fat lean mayonnaise and protein-rich plant sausage. Delicious and healthy at the same time!",
+        "price": "75.00",
+        "dish_type": 2,
+        "cooks": [
+            5,
+            7
+        ]
+    }
+},
+{
+    "model": "cafe.dish",
+    "pk": 5,
+    "fields": {
+        "name": "Buckwheat",
+        "description": "Buckwheat is a classic side dish and a true gift of nature with a pure and natural taste. It is rich in proteins, vitamins, minerals and antioxidants that contribute to your health and well-being. Buckwheat is a universal grain that is used in many dishes, adding benefits and unique taste. In addition, it gives a feeling of satiety for a long time.",
+        "price": "40.00",
+        "dish_type": 4,
+        "cooks": [
+            4,
+            6
+        ]
+    }
+},
+{
+    "model": "cafe.dish",
+    "pk": 6,
+    "fields": {
+        "name": "Basmati rice with black mustard",
+        "description": "Basmati rice is the basis of Indian cuisine. Its characteristic feature is elongated grains, which after cooking receive a unique smell and taste with nutty notes. Compared to other types of rice, the glycemic index of basmati is lower, so it is used as a dietary food. Correctly selected spices harmoniously complement the dish.",
+        "price": "36.00",
+        "dish_type": 4,
+        "cooks": [
+            6,
+            7
+        ]
+    }
+},
+{
+    "model": "cafe.dish",
+    "pk": 7,
+    "fields": {
+        "name": "Seitan in creamy sauce",
+        "description": "Seitan is considered one of the best meat substitutes. Firstly, it contains a large amount of protein, since it is essentially wheat protein. Secondly, its structure and taste resemble chicken meat. Therefore, it is perfect for those who have decided to try vegetarian cuisine, but are not yet ready to give up meat products. Cream and spices give the dish a refined taste.",
+        "price": "70.00",
+        "dish_type": 3,
+        "cooks": [
+            10,
+            8
+        ]
+    }
+},
+{
+    "model": "cafe.dish",
+    "pk": 8,
+    "fields": {
+        "name": "Chickpea cutlet",
+        "description": "Chickpea cutlet, made from chickpeas, white cabbage and zucchini with spices and olive oil, is highly nutritious. It contains proteins, carbohydrates and fats, and in the right proportions. In addition, it is tasty and can complement a side dish or soup. It also goes well with salads.",
+        "price": "60.00",
+        "dish_type": 3,
+        "cooks": [
+            9,
+            7
+        ]
+    }
+},
+{
+    "model": "cafe.dish",
+    "pk": 9,
+    "fields": {
+        "name": "Sea ​​buckthorn tea",
+        "description": "Warm and aromatic sea buckthorn tea is the perfect way to warm up in the cold season. Each cup of this drink combines the natural sweetness of sea buckthorn, the subtle spice of cloves and the freshness of rosemary, creating a unique taste that will not leave you indifferent. It will give you a feeling of coziness and comfort, and its rich color and pleasant aroma will fill your home with an atmosphere of warmth and coziness.\r\n\r\nAn excellent addition to this tea will be vegan desserts, cakes and cookies, which will emphasize its unique flavor notes and create the perfect composition for your tea party.\r\n\r\nEnjoy the moment and allow yourself to immerse yourself in the world of true pleasure with a cup of hot sea buckthorn tea.",
+        "price": "45.00",
+        "dish_type": 5,
+        "cooks": [
+            3,
+            6,
+            5
+        ]
+    }
+},
+{
+    "model": "cafe.dish",
+    "pk": 10,
+    "fields": {
+        "name": "Fresh ginger-lemon juice",
+        "description": "Ginger-lemon fresh juice is an ideal option for quenching thirst and vitaminizing the body. The incredible combination of sour lemon with bitter aromatic ginger will improve your well-being, strengthen your immune system and energize you for the whole day. We recommend this refreshing and healthy drink as one of the components of individual prevention of vitamin deficiency.",
+        "price": "40.00",
+        "dish_type": 5,
+        "cooks": [
+            1,
+            4,
+            9,
+            7
+        ]
+    }
+},
+{
+    "model": "cafe.dish",
+    "pk": 11,
+    "fields": {
+        "name": "Radharani Cake",
+        "description": "This dessert is best consumed in the morning or at lunchtime, when you need to charge your body with energy to the maximum. Soft honey cakes are quite filling, especially in combination with sour cream and walnuts. Prunes and dried apricots provide a pleasant sweet and sour taste to the cake. This dessert goes well with ginger tea or berry compote.",
+        "price": "72.00",
+        "dish_type": 6,
+        "cooks": [
+            6
+        ]
+    }
+},
+{
+    "model": "cafe.dish",
+    "pk": 12,
+    "fields": {
+        "name": "Napoleon cake",
+        "description": "Try our exquisite vegan Napoleon cake! This culinary masterpiece will charm you from the first bite with its delicate layered cakes that literally melt in your mouth.\r\n\r\nThe layers are covered with airy custard with a rich taste and creamy texture. Vanilla notes and a light aroma of bourbon create a unique harmony of flavors, and they will remain in your memory for a long time.\r\n\r\nPerfect for those who value quality, taste and care about their health. Try vegan Napoleon and discover a new dimension of culinary pleasure!",
+        "price": "80.00",
+        "dish_type": 6,
+        "cooks": [
+            5
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 1,
+    "fields": {
+        "name": "Sorrel",
+        "dishes": [
+            1
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 2,
+    "fields": {
+        "name": "Potato",
+        "dishes": [
+            1,
+            4,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 3,
+    "fields": {
+        "name": "Carrot",
+        "dishes": [
+            1,
+            4,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 4,
+    "fields": {
+        "name": "Tofu cheese",
+        "dishes": [
+            1
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 5,
+    "fields": {
+        "name": "Spices",
+        "dishes": [
+            8,
+            1,
+            2,
+            7
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 6,
+    "fields": {
+        "name": "Salt",
+        "dishes": [
+            5,
+            1
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 7,
+    "fields": {
+        "name": "Beetroot",
+        "dishes": [
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 8,
+    "fields": {
+        "name": "Beans",
+        "dishes": [
+            2
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 9,
+    "fields": {
+        "name": "Cabbage white",
+        "dishes": [
+            8,
+            2
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 10,
+    "fields": {
+        "name": "Paste tomato",
+        "dishes": [
+            2
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 11,
+    "fields": {
+        "name": "Oil vegetable",
+        "dishes": [
+            5,
+            2
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 12,
+    "fields": {
+        "name": "Wakame seaweed",
+        "dishes": [
+            3
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 13,
+    "fields": {
+        "name": "Soy mayonnaise",
+        "dishes": [
+            4,
+            3
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 14,
+    "fields": {
+        "name": "Peas green",
+        "dishes": [
+            4
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 15,
+    "fields": {
+        "name": "Cucumber",
+        "dishes": [
+            4
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 16,
+    "fields": {
+        "name": "Sausage vegan",
+        "dishes": [
+            4
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 17,
+    "fields": {
+        "name": "Buckwheat groats",
+        "dishes": [
+            5
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 18,
+    "fields": {
+        "name": "Basmati rice",
+        "dishes": [
+            6
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 19,
+    "fields": {
+        "name": "Mustard black",
+        "dishes": [
+            6
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 20,
+    "fields": {
+        "name": "Seitan",
+        "dishes": [
+            7
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 21,
+    "fields": {
+        "name": "Cream natural",
+        "dishes": [
+            7
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 22,
+    "fields": {
+        "name": "Soy sauce",
+        "dishes": [
+            7
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 23,
+    "fields": {
+        "name": "Chickpeas",
+        "dishes": [
+            8
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 24,
+    "fields": {
+        "name": "Zucchini",
+        "dishes": [
+            8
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 25,
+    "fields": {
+        "name": "Sea ​​​​buckthorn",
+        "dishes": [
+            9
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 26,
+    "fields": {
+        "name": "Carnation",
+        "dishes": [
+            9
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 27,
+    "fields": {
+        "name": "Rosemary",
+        "dishes": [
+            9
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 28,
+    "fields": {
+        "name": "Water",
+        "dishes": [
+            9
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 29,
+    "fields": {
+        "name": "Cakes honey",
+        "dishes": [
+            11
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 30,
+    "fields": {
+        "name": "Butter-sour cream",
+        "dishes": [
+            11
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 31,
+    "fields": {
+        "name": "Prunes",
+        "dishes": [
+            11
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 32,
+    "fields": {
+        "name": "Apricots dried",
+        "dishes": [
+            11
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 33,
+    "fields": {
+        "name": "Walnut",
+        "dishes": [
+            11
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 34,
+    "fields": {
+        "name": "Pastry puff",
+        "dishes": [
+            12
+        ]
+    }
+},
+{
+    "model": "cafe.ingredient",
+    "pk": 35,
+    "fields": {
+        "name": "Custard",
+        "dishes": [
+            12
+        ]
+    }
+}
+]
