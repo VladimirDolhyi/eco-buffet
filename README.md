@@ -59,6 +59,15 @@ $ python manage.py runserver
 * Managing dishes, cooks, dish types & ingredients directly from website interface
 * Powerful admin panel for advanced managing
 
+### 👉 Test user
+
+* login: user 
+* password: user12345
+
+### 👉 Render link
+
+https://eco-buffet.onrender.com
+
 ### 👉 Home page
 ![Home Page](static/images/Screenshot_homepage.png)
 
