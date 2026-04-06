@@ -14,7 +14,7 @@ You are able to create, update and delete any items.
 
 ### 👉 Check it out!
 
-[Cafe project deployed to Render](https://eco-buffet.render.com/)
+[Cafe project deployed to Render](https://eco-buffet.onrender.com/)
 
 ### 👉 Installation
 
